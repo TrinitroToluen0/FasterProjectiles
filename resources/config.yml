@@ -1,0 +1,4 @@
+# The multiplier of the speed, this must be an integer greater than 1.
+# A multiplier of 3 means that all the projectiles will travel 300% faster.
+
+speed-multiplier: 3
