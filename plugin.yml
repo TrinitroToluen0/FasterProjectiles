@@ -2,6 +2,6 @@
 name: FasterProjectiles
 version: 1.0.0
 main: Mencoreh\FasterProjectiles\Main
-api: [5.0.0, 5.13.0]
+api: 5.13.0
 src-namespace-prefix: Mencoreh\FasterProjectiles
 ...
