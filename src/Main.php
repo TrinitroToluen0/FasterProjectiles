@@ -9,9 +9,7 @@ use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener {
-    public bool $enabled;
     public int $multiplier;
-
 
     public function onEnable(): void {
         $this->multiplier = $this->getConfig()->get("speed-multiplier");
@@ -21,8 +19,10 @@ class Main extends PluginBase implements Listener {
 
     public function onProjectileLaunch(ProjectileLaunchEvent $event): void {
         if($event->isCancelled()) return;
-        
+
         $entity = $event->getEntity();
         $entity->setMotion($entity->getMotion()->multiply($this->multiplier));
     }
 }
+
+// Is this the shortest plugin in the history of Pocketmine?
