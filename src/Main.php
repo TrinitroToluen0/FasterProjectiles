@@ -9,7 +9,7 @@ use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener {
-    public int $multiplier;
+    public int|float $multiplier;
 
     public function onEnable(): void {
         $this->multiplier = $this->getConfig()->get("speed-multiplier");
