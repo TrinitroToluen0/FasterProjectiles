@@ -1,7 +1,8 @@
-# The multiplier of the speed, this must be an integer greater than 1.
+# The multiplier of the speed, this must be an integer or float greater than 1.
 # A multiplier of 2.5 means that all the projectiles will travel 250% faster.
 speed-multiplier: 2.5
 
-# Gravity increase, this feature was added because pearls were going to far.
+# Gravity multiplier, this feature was added because pearls were going too far.
 # The speed is good, but they have A LOT of range. Increase the gravity of the projectiles here.
-gravity-increase: 1
+# A multiplier of 2.5 means that all the projectiles will have 250% more gravity.
+gravity-multiplier: 1
