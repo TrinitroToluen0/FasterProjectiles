@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace Mencoreh\FasterProjectiles;
 
+use pocketmine\entity\projectile\Projectile;
 use pocketmine\event\entity\ProjectileLaunchEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
+use pocketmine\event\entity\EntityMotionEvent;
+
 
 class Main extends PluginBase implements Listener {
     public int|float $multiplier;
@@ -22,6 +25,16 @@ class Main extends PluginBase implements Listener {
 
         $entity = $event->getEntity();
         $entity->setMotion($entity->getMotion()->multiply($this->multiplier));
+    }
+
+    public function onEntityMotion(EntityMotionEvent $event): void
+    {
+        $entity = $event->getEntity();
+        if ($entity instanceof Projectile && !$event->isCancelled()) {
+            $motion = $entity->getMotion();
+            $motion->y -= 0.1;
+            $entity->setMotion($motion);
+        }
     }
 }
 
