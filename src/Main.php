@@ -15,7 +15,7 @@ class Main extends PluginBase implements Listener {
 
     public function onEnable(): void {
         $this->multiplier = $this->getConfig()->get("speed-multiplier");
-        $this->gravity = $this->getConfig()->get("gravity-increase");
+        $this->gravity = $this->getConfig()->get("gravity-multiplier");
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveDefaultConfig();
     }
