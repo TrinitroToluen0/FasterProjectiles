@@ -1,4 +1,5 @@
 [![](https://poggit.pmmp.io/shield.state/FasterProjectiles)](https://poggit.pmmp.io/p/FasterProjectiles)
+[![](https://poggit.pmmp.io/shield.dl.total/FasterProjectiles)](https://poggit.pmmp.io/p/FasterProjectiles)
 
 # FasterProjectiles
  A PocketMine-MP plugin to increase the speed of the projectiles
